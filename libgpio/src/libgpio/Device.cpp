@@ -1,4 +1,4 @@
-#include <libgpio/internal/Device.hpp>
+#include <libgpio/Device.hpp>
 
 #include <stdexcept>
 #include <fmt/core.h>

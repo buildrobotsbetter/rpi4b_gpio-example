@@ -1,7 +1,7 @@
 #ifndef LIBGPIO_LED
 #define LIBGPIO_LED
 
-#include <libgpio/internal/Device.hpp>
+#include <libgpio/Device.hpp>
 #include <libgpio/PullDirection.hpp>
 
 namespace libgpio

@@ -1,23 +1,20 @@
 #ifndef LIBGPIO_LED
 #define LIBGPIO_LED
 
-#include <libgpio/internal/Device.hpp>
+#include <libgpio/DigitalOutput.hpp>
 
 namespace libgpio
 {
     
-class LED : public Device
+/// @brief An LED is a specialized type of DigitalOutput device.
+/// This class works identically to the generic DigitalOutput class
+/// and is provided as a convenience as a mechanism to improve code
+/// readability. 
+class LED : public DigitalOutput
 {
 public:
-    LED(uint32_t gpioPin);
-    ~LED() = default;
-
-    /// @brief Set the output of the LED
-    /// @param value true = On, false = Off
-    void setOutput(bool value);
-
-private:
-    unsigned int m_gpioPin;
+    LED(uint32_t gpioPin) : DigitalOutput(gpioPin) {};
+    ~LED() override = default;
 };
 
 } // namespace libgpio
