@@ -5,6 +5,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [1.3.0] - 2024-07-13
+
+### Added
+- Examples showing how to use I2C to communicate with an accelerometer (ADXL345) when using the `pigpio` library functions
+- `I2C` class to `libgpio` library which encapsulates the `pigpio` I2C functionality
+
+### Changed
+- Change `DigitalOutput` class in `libgpio` library to throw a `std::invalid_argument` exception when provided with a bad gpio pin value instead of a `std::runtime_error` exception.
+
+
 ## [1.2.0] - 2024-03-10
 
 ### Added

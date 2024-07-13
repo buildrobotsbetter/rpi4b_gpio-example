@@ -36,6 +36,7 @@ int main()
 
     signal(SIGINT, signalHandler);
 
+    // Instantiate the left motor
     std::cout << fmt::format("Configuring Left Motor on GPIO {}, {}, & {}... ", IN1_PIN, IN2_PIN, ENA_PIN);
     libgpio::MotorDriver leftMotor(IN1_PIN, IN2_PIN, ENA_PIN);
     std::cout << "SUCCESS" << std::endl;
