@@ -19,7 +19,7 @@ DigitalOutput::DigitalOutput(uint32_t gpioPin):
     {       
         case PI_BAD_GPIO:
         {
-            throw std::runtime_error(fmt::format("{} is a bad gpio pin", m_gpioPin));
+            throw std::invalid_argument(fmt::format("{} is a bad gpio pin", m_gpioPin));
         }
 
         case PI_BAD_MODE:

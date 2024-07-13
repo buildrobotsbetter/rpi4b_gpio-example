@@ -1,9 +1,9 @@
 ## Hardware Connections
 
-In this example, we are using the Viam Rover 1, which comes with an LN298 motor driver.
+In this example, we are using the Viam Rover 1, which comes with an L298N motor driver.
 [Viam Rover 1 Documentation](https://docs.viam.com/get-started/try-viam/rover-resources/rover-tutorial-1/)
 
-The pin connections specified in the installation instructions (an verified by the viam configuration):
+The pin connections specified in the installation instructions (and verified by the viam configuration):
 
 ### Left Motor
 
