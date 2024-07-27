@@ -6,7 +6,7 @@
 [subrepo]
 	remote = git@github.com:buildrobotsbetter/libgpio.git
 	branch = main
-	commit = 13054f8aaa2d92f93fe5d68c7add66a86d26b0cc
-	parent = dbe4e2260130ca9619b8e57f1713ce542afa298f
+	commit = 3613bb3452686e1ed02309418168dbea5e3765b7
+	parent = 423693c4e5429675d684e37134c580d3b46d9d5f
 	method = merge
 	cmdver = 0.4.9
