@@ -1,5 +1,5 @@
-
 #include <pigpio.h>
+
 #include <iostream>
 #include <fmt/core.h> // For improved string formatting
 #include <chrono>

@@ -1,25 +1,24 @@
 #ifndef LIBGPIO_DIGITALOUTPUT
 #define LIBGPIO_DIGITALOUTPUT
 
-#include <libgpio/Device.hpp>
+#if defined(LIBGPIO_USE_PIGPIO)
 
-namespace libgpio
-{
+#include "./pigpio/DigitalOutput.hpp"
+namespace libgpio {
+    using DigitalOutput = _libgpio::pigpio::DigitalOutput;
+}
 
-class DigitalOutput : public Device
-{
-public:
-    DigitalOutput(uint32_t gpioPin);
-    ~DigitalOutput() override;
+#elif defined(LIBGPIO_USE_PIGPIOD_IF2)
 
-    /// @brief Set the output of the LED
-    /// @param value true = On, false = Off
-    void setOutput(bool value);
+#include "./pigpiod_if2/DigitalOutput.hpp"
+namespace libgpio {
+    using DigitalOutput = _libgpio::pigpiod_if2::DigitalOutput;
+}
 
-private:
-    unsigned int m_gpioPin;
-};
+#else
 
-} // namespace libgpio
+#error "No GPIO library specified"
+
+#endif
 
 #endif // LIBGPIO_DIGITALOUTPUT

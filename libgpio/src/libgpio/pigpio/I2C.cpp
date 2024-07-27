@@ -1,9 +1,9 @@
-#include <libgpio/I2C.hpp>
+#include <libgpio/pigpio/I2C.hpp>
 
 #include <stdexcept>
 #include <fmt/core.h>
 
-namespace libgpio
+namespace _libgpio::pigpio
 {
 
 I2C::I2C() :

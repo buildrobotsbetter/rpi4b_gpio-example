@@ -1,7 +1,6 @@
-#ifndef LIBGPIO_PULLDIRECTION
-#define LIBGPIO_PULLDIRECTION
+#ifndef LIBGPIO_MOTORDIRECTION
+#define LIBGPIO_MOTORDIRECTION
 
-#include <pigpio.h>
 #include <string>
 
 namespace libgpio
@@ -36,4 +35,4 @@ private:
 
 } // namespace libgpio
 
-#endif // LIBGPIO_PULLDIRECTION
+#endif // LIBGPIO_MOTORDIRECTION

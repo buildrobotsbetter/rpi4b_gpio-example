@@ -1,12 +1,12 @@
-#include <libgpio/Switch.hpp>
+#include <libgpio/pigpio/Switch.hpp>
 
 #include <stdexcept>
 #include <fmt/core.h>
 
-namespace libgpio
+namespace _libgpio::pigpio
 {
 
-Switch::Switch(uint32_t gpioPin, PullDirection pullDirection):
+Switch::Switch(uint32_t gpioPin, libgpio::PullDirection pullDirection):
     m_gpioPin(gpioPin),
     m_pullDirection(pullDirection)
 {

@@ -1,6 +1,5 @@
 #include <libgpio/LED.hpp>
-
-#include <pigpio.h>
+#include <libgpio/Utilities.hpp>
 
 #include <iostream>
 #include <fmt/core.h> // For improved string formatting
@@ -23,8 +22,9 @@ int main()
     signal(SIGINT, signalHandler);
 
     // Print the pigpio library version
-    std::cout << "Using pigpio version " << gpioVersion() << std::endl;
-    std::cout << "Running on " << fmt::format("{:x}", gpioHardwareRevision()) << std::endl;
+    std::cout << "Using libgpio version: " << libgpio::version() << std::endl;
+    std::cout << "Using gpio library: " << libgpio::gpioLibrary() << std::endl;
+    // std::cout << "Running on " << fmt::format("{:x}", gpioHardwareRevision()) << std::endl;
 
     std::cout << "Configuring LED on " << LED_GPIO_PIN1 << std::endl;
     auto led1 = libgpio::LED(LED_GPIO_PIN1);

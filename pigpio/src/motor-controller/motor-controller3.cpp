@@ -1,6 +1,5 @@
-
-
 #include <libgpio/MotorDriver.hpp>
+#include <libgpio/Utilities.hpp>
 
 #include <iostream>
 #include <fmt/core.h> // For improved string formatting
@@ -31,8 +30,10 @@ int main()
     static unsigned int ENA_PIN = 22;
 
     // Print the pigpio library version
-    std::cout << "Using pigpio version " << gpioVersion() << std::endl;
-    std::cout << "Running on " << fmt::format("{:x}", gpioHardwareRevision()) << std::endl;
+    // std::cout << "Using pigpio version " << gpioVersion() << std::endl;
+    // std::cout << "Running on " << fmt::format("{:x}", gpioHardwareRevision()) << std::endl;
+    std::cout << "Using libgpio version: " << libgpio::version() << std::endl;
+    std::cout << "Using gpio library: " << libgpio::gpioLibrary() << std::endl;
 
     signal(SIGINT, signalHandler);
 

@@ -1,8 +1,27 @@
 #ifndef LIBGPIO_PULLDIRECTION
 #define LIBGPIO_PULLDIRECTION
 
-#include <pigpio.h>
 #include <string>
+
+#if defined(LIBGPIO_USE_PIGPIO)
+
+#include "./pigpio/PullDirectionEnum.hpp"
+namespace _libgpio {
+    namespace PullDirection = _libgpio::pigpio::PullDirection;
+}
+
+#elif defined(LIBGPIO_USE_PIGPIOD_IF2)
+
+#include "./pigpiod_if2/PullDirectionEnum.hpp"
+namespace _libgpio {
+    namespace PullDirection = _libgpio::pigpiod_if2::PullDirection;
+}
+
+#else
+
+#error "No GPIO library specified"
+
+#endif
 
 namespace libgpio
 {
@@ -13,9 +32,9 @@ public:
     // Enum values match the pigpio PI_PUD_xxx define values
     // to allow straight pass through to pigpio functions
     enum Value {
-        OFF = PI_PUD_OFF,
-        DOWN = PI_PUD_DOWN,
-        UP = PI_PUD_UP
+        OFF = _libgpio::PullDirection::OFF,
+        DOWN = _libgpio::PullDirection::DOWN,
+        UP = _libgpio::PullDirection::UP
     };
 
     constexpr PullDirection(uint8_t value) :

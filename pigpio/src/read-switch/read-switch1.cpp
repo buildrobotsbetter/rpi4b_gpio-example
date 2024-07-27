@@ -1,4 +1,5 @@
 #include <libgpio/Switch.hpp>
+#include <libgpio/Utilities.hpp>
 
 #include <iostream>
 #include <fmt/core.h> // For improved string formatting
@@ -22,8 +23,11 @@ int main()
     signal(SIGINT, signalHandler);
 
     // Print the pigpio library version
-    std::cout << "Using libgpio with pigpio version " << gpioVersion() << std::endl;
-    std::cout << "Running on " << fmt::format("{:x}", gpioHardwareRevision()) << std::endl;
+    // std::cout << "Using libgpio with pigpio version " << gpioVersion() << std::endl;
+    // std::cout << "Running on " << fmt::format("{:x}", gpioHardwareRevision()) << std::endl;
+    std::cout << "Using libgpio version: " << libgpio::version() << std::endl;
+    std::cout << "Using gpio library: " << libgpio::gpioLibrary() << std::endl;
+    // std::cout << "Running on " << fmt::format("{:x}", gpioHardwareRevision()) << std::endl;
 
     std::cout << "Configuring Switch on " << SWITCH_GPIO_PIN << std::endl;
     auto switch1 = libgpio::Switch(SWITCH_GPIO_PIN, libgpio::PullDirection::DOWN);

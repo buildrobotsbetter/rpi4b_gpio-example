@@ -1,15 +1,15 @@
-#include <libgpio/DigitalOutput.hpp>
+#include <libgpio/pigpiod_if2/DigitalOutput.hpp>
 
 #include <stdexcept>
 #include <fmt/core.h>
 
-namespace libgpio
+namespace _libgpio::pigpiod_if2
 {
 
 DigitalOutput::DigitalOutput(uint32_t gpioPin):
     m_gpioPin(gpioPin)
 {
-    auto result = gpioSetMode(m_gpioPin, PI_OUTPUT);
+    auto result = set_mode(getGpioHandle(), m_gpioPin, PI_OUTPUT);
     if (result == 0)
     {
         return;
@@ -42,7 +42,7 @@ DigitalOutput::~DigitalOutput()
 
 void DigitalOutput::setOutput(bool value)
 {
-    auto result = gpioWrite(m_gpioPin, static_cast<unsigned int>(value));
+    auto result = gpio_write(getGpioHandle(), m_gpioPin, static_cast<unsigned int>(value));
     if (result == 0)
     {
         return;

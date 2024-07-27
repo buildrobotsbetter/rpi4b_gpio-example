@@ -1,9 +1,9 @@
-#include <libgpio/Device.hpp>
+#include <libgpio/pigpio/Device.hpp>
 
 #include <stdexcept>
 #include <fmt/core.h>
 
-namespace libgpio
+namespace _libgpio::pigpio
 {
 
 // Initialize the static variable

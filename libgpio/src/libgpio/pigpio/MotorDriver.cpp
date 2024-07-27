@@ -1,10 +1,12 @@
-#include <libgpio/MotorDriver.hpp>
+#include <libgpio/pigpio/MotorDriver.hpp>
 
 #include <stdexcept>
 #include <fmt/core.h>
 
-namespace libgpio
+namespace _libgpio::pigpio
 {
+
+using libgpio::MotorDirection;
 
 MotorDriver::MotorDriver(uint32_t input1Pin, uint32_t input2Pin, uint32_t enablePin):
     m_input1Pin(input1Pin),

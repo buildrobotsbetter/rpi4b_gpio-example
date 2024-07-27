@@ -1,21 +1,24 @@
 #ifndef LIBGPIO_DEVICE_H
 #define LIBGPIO_DEVICE_H
 
-#include <pigpio.h>
+#if defined(LIBGPIO_USE_PIGPIO)
 
-namespace libgpio
-{
+#include "./pigpio/Device.hpp"
+namespace libgpio {
+    using Device = _libgpio::pigpio::Device;
+}
 
-class Device
-{
-public:
-    Device();
-    virtual ~Device();
+#elif defined(LIBGPIO_USE_PIGPIOD_IF2)
 
-private:
-    static uint64_t m_deviceCount;
-};
+#include "./pigpiod_if2/Device.hpp"
+namespace libgpio {
+    using Device = _libgpio::pigpiod_if2::Device;
+}
 
-} // namespace libgpio
+#else
+
+#error "No GPIO library specified"
+
+#endif
 
 #endif // LIBGPIO_DEVICE_H
