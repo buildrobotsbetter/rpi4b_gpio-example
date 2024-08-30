@@ -3,6 +3,8 @@ PROJECT=COMMON_SOURCES
 ./include,**.hpp
 -./src/libgpio/pigpio,**.cpp
 -./include/libgpio/pigpio,**.hpp
+-./src/libgpio/pigpiod_if2,**.cpp
+-./include/libgpio/pigpiod_if2,**.hpp
 
 PROJECT=PIGPIO_SOURCES
 ./src/libgpio/pigpio,**.cpp

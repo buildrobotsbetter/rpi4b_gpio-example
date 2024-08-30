@@ -8,19 +8,8 @@ set(COMMON_SOURCES
 	./include/libgpio/PullDirection.hpp
 	./include/libgpio/Switch.hpp
 	./include/libgpio/Utilities.hpp
-	./include/libgpio/pigpiod_if2/Device.hpp
-	./include/libgpio/pigpiod_if2/DigitalOutput.hpp
-	./include/libgpio/pigpiod_if2/I2C.hpp
-	./include/libgpio/pigpiod_if2/MotorDriver.hpp
-	./include/libgpio/pigpiod_if2/PullDirectionEnum.hpp
-	./include/libgpio/pigpiod_if2/Switch.hpp
 	./src/libgpio/MotorDirection.cpp
 	./src/libgpio/PullDirection.cpp
-	./src/libgpio/pigpiod_if2/Device.cpp
-	./src/libgpio/pigpiod_if2/DigitalOutput.cpp
-	./src/libgpio/pigpiod_if2/I2C.cpp
-	./src/libgpio/pigpiod_if2/MotorDriver.cpp
-	./src/libgpio/pigpiod_if2/Switch.cpp
 )
 
 set(PIGPIO_SOURCES
