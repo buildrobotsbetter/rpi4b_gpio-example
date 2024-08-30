@@ -3,7 +3,9 @@
 #include <stdexcept>
 #include <fmt/core.h>
 
-namespace _libgpio::pigpiod_if2
+namespace _libgpio
+{
+namespace pigpiod_if2
 {
 
 I2C::I2C() :
@@ -227,4 +229,5 @@ void I2C::read(uint8_t registerAddress, std::vector<uint8_t>& data)
     }
 }
 
-} // namespace libgpio
+} // namespace pigpiod_if2
+} // namespace _libgpio

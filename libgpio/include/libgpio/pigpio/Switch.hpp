@@ -4,7 +4,9 @@
 #include <libgpio/pigpio/Device.hpp>
 #include <libgpio/PullDirection.hpp>
 
-namespace _libgpio::pigpio
+namespace _libgpio
+{
+namespace pigpio
 {
     
 class Switch : public Device
@@ -25,6 +27,7 @@ private:
     libgpio::PullDirection m_pullDirection;
 };
 
-} // namespace _libgpio::pigpio
+} // namespace pigpio
+} // namespace _libgpio
 
 #endif // LIBGPIO_PIGPIO_SWITCH

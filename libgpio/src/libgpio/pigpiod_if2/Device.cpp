@@ -3,7 +3,9 @@
 #include <stdexcept>
 #include <fmt/core.h>
 
-namespace _libgpio::pigpiod_if2
+namespace _libgpio
+{
+namespace pigpiod_if2
 {
 
 // Initialize the static variable
@@ -47,4 +49,5 @@ int Device::getGpioHandle() const
     return m_gpioHandle; 
 }
 
-} // namespace libgpio
+} // namespace pigpiod_if2
+} // namespace _libgpio

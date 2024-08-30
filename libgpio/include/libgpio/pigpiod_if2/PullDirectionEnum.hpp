@@ -3,7 +3,11 @@
 
 #include <pigpiod_if2.h>
 
-namespace _libgpio::pigpiod_if2::PullDirection
+namespace _libgpio
+{
+namespace pigpiod_if2
+{
+namespace PullDirection
 {
     
 enum Value
@@ -13,6 +17,8 @@ enum Value
     UP = PI_PUD_UP
 };
 
-} // namespace _libgpio::pigpiod_if2::PullDirection
+} // namespace PullDirection
+} // namespace pigpiod_if2
+} // namespace _libgpio
 
 #endif // LIBGPIO_PIGPIOD_IF2_PULLDIRECTION

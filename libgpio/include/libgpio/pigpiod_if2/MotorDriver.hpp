@@ -5,7 +5,9 @@
 #include <libgpio/pigpiod_if2/DigitalOutput.hpp>
 #include <libgpio/MotorDirection.hpp>
 
-namespace _libgpio::pigpiod_if2
+namespace _libgpio
+{
+namespace pigpiod_if2
 {
     
 class MotorDriver : public Device
@@ -44,6 +46,7 @@ private:
     double m_effort_percent;
 };
 
-} // namespace _libgpio::pigpio
+} // namespace pigpiod_if2
+} // namespace _libgpio
 
 #endif // LIBGPIO_PIGPIOD_IF2_MOTORDRIVER

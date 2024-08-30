@@ -3,7 +3,9 @@
 
 #include <pigpiod_if2.h>
 
-namespace _libgpio::pigpiod_if2
+namespace _libgpio
+{
+namespace pigpiod_if2
 {
 
 class Device
@@ -20,6 +22,7 @@ private:
     static int m_gpioHandle;
 };
 
-} // namespace _libgpio::pigpiod_if2
+} // namespace pigpiod_if2
+} // namespace _libgpio
 
 #endif // LIBGPIO_PIGPIOD_IF2_DEVICE_H

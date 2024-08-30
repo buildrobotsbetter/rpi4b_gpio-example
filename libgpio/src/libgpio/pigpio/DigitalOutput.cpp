@@ -3,9 +3,10 @@
 #include <stdexcept>
 #include <fmt/core.h>
 
-namespace _libgpio::pigpio
+namespace _libgpio
 {
-
+namespace pigpio
+{
 DigitalOutput::DigitalOutput(uint32_t gpioPin):
     m_gpioPin(gpioPin)
 {
@@ -67,4 +68,5 @@ void DigitalOutput::setOutput(bool value)
     }
 }
 
-} // namespace libgpio
+} // namespace pigpio
+} // namespace _libgpio

@@ -3,7 +3,9 @@
 #include <stdexcept>
 #include <fmt/core.h>
 
-namespace _libgpio::pigpio
+namespace _libgpio
+{
+namespace pigpio
 {
 
 using libgpio::MotorDirection;
@@ -61,9 +63,9 @@ void MotorDriver::setEffort_percent(double value)
         throw std::runtime_error(fmt::format("Effort value {} is invalid. Valid range [0.0, 100.0]", value)); 
     }
 
-    m_effort_percent = value;
+    m_effort_percent = value / 100.0;
 
-    auto intValue = static_cast<uint8_t>(255 * m_effort_percent);
+    auto intValue = static_cast<uint8_t>(255.0 * m_effort_percent);
     auto result = gpioPWM(m_enablePin, intValue);
     if (result == 0)
     {
@@ -89,4 +91,5 @@ void MotorDriver::setEffort_percent(double value)
     }
 }
 
-} // namespace libgpio
+} // namespace pigpio
+} // namespace _libgpio

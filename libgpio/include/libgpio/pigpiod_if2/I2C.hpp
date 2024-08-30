@@ -5,7 +5,9 @@
 
 #include <vector>
 
-namespace _libgpio::pigpiod_if2
+namespace _libgpio
+{
+namespace pigpiod_if2
 {
     
 class I2C : public Device
@@ -103,6 +105,7 @@ private:
     uint8_t m_deviceAddress;
 };
 
-} // namespace _libgpio::pigpio
+} // namespace pigpiod_if2
+} // namespace _libgpio
 
 #endif // LIBGPIO_PIGPIOD_IF2_I2C

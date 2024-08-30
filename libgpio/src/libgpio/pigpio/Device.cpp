@@ -3,7 +3,9 @@
 #include <stdexcept>
 #include <fmt/core.h>
 
-namespace _libgpio::pigpio
+namespace _libgpio
+{
+namespace pigpio
 {
 
 // Initialize the static variable
@@ -40,4 +42,5 @@ Device::~Device()
     }
 }
 
-} // namespace libgpio
+} // namespace pigpio
+} // namespace _libgpio

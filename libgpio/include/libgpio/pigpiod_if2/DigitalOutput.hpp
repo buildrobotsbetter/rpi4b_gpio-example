@@ -3,7 +3,9 @@
 
 #include <libgpio/pigpiod_if2/Device.hpp>
 
-namespace _libgpio::pigpiod_if2
+namespace _libgpio
+{
+namespace pigpiod_if2
 {
 
 class DigitalOutput : public Device
@@ -20,6 +22,7 @@ private:
     unsigned int m_gpioPin;
 };
 
-} // namespace _libgpio::pigpigpiod_if2pio
+} // namespace pigpiod_if2
+} // namespace _libgpio
 
 #endif // LIBGPIO_PIGPIOD_IF2_DIGITALOUTPUT

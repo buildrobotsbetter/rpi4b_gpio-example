@@ -3,7 +3,9 @@
 
 #include <pigpio.h>
 
-namespace _libgpio::pigpio
+namespace _libgpio
+{
+namespace pigpio
 {
 
 class Device
@@ -16,6 +18,7 @@ private:
     static uint64_t m_deviceCount;
 };
 
-} // namespace _libgpio::pigpio
+} // namespace pigpio
+} // namespace _libgpio
 
 #endif // LIBGPIO_PIGPIO_DEVICE_H

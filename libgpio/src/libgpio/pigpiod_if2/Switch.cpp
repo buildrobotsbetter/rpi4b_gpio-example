@@ -3,7 +3,9 @@
 #include <stdexcept>
 #include <fmt/core.h>
 
-namespace _libgpio::pigpiod_if2
+namespace _libgpio
+{
+namespace pigpiod_if2
 {
 
 Switch::Switch(uint32_t gpioPin, libgpio::PullDirection pullDirection):
@@ -81,4 +83,5 @@ bool Switch::getInput() const
     return (result == 1); 
 }
 
-} // namespace libgpio
+} // namespace pigpiod_if2
+} // namespace _libgpio

@@ -3,7 +3,9 @@
 
 #include <libgpio/pigpio/Device.hpp>
 
-namespace _libgpio::pigpio
+namespace _libgpio
+{
+namespace pigpio
 {
 
 class DigitalOutput : public Device
@@ -20,6 +22,7 @@ private:
     unsigned int m_gpioPin;
 };
 
-} // namespace _libgpio::pigpio
+} // namespace pigpio
+} // namespace _libgpio
 
 #endif // LIBGPIO_PIGPIO_DIGITALOUTPUT
