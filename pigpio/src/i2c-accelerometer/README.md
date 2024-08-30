@@ -1,7 +1,7 @@
 ## Hardware Connections
 
 In this example, we are using the Viam Rover 1, which comes with a ADXL345 3-axis accelerometer.
-[Viam Rover 1 Documentation](https://docs.viam.com/get-started/try-viam/rover-resources/rover-tutorial-1/)
+[Viam Rover 1 Documentation](https://docs.viam.com/appendix/try-viam/rover-resources/rover-tutorial-1/)
 
 The pin connections specified in the installation instructions (and verified by the viam configuration):
 
